@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+      <h1>
+  enseignants
+    </h1>
+{{ form_start(form) }}
+    {{ form_widget(form) }}
+
+    <input type="submit" value="Maison"
+           class="btn btn-default pull-right" />
+    <INPUT Type="button" VALUE="Retour" onClick="history.go(-1);return true;">
+{{ form_end(form) }}
+
+
+{% endblock %}
+{% block styleblock %}
+    <style>
+        
+    </style>
+{% endblock %}

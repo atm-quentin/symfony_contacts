@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+      <h1>
+        Dire <a href="{{path('bonjour')}}">bonjour</a> à :
+    </h1>
+    
+    <ul>
+        {% for nom in noms %}
+            <li> <a href="{{path('bonjour',{'nom' :nom})}}">{{nom}}</a></li>
+        {% endfor %}
+    </ul>
+    
+   
+
+
+{% endblock %}

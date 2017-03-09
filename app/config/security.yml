@@ -1,0 +1,48 @@
+# To get started with security, check out the documentation:
+# http://symfony.com/doc/current/security.html
+security:
+    encoders:
+        Symfony\Component\Security\Core\User\User: plaintext
+    # http://symfony.com/doc/current/security.html#b-configuring-how-users-are-loaded
+    providers:
+        in_memory:
+           memory:
+                users:
+                    maison:
+                        password: 1111
+                        roles: 'ROLE_USER'
+                    quentin:
+                        password: 1111
+                        roles: 'ROLE_ENSEIGNANT'
+                    urgot:
+                        password: 0000
+                        roles: 'ROLE_OPERATEUR'
+                    Romain:
+                        password: 1010
+                        roles: 'ROLE_OPERATEUR'
+    firewalls:
+        # disables authentication for assets and the profiler, adapt it according to your needs
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+
+        main:
+            anonymous: ~
+            form_login:
+                login_path: login
+                check_path: login
+            logout:
+                path:   /logout
+                target: /
+          
+            # activate different ways to authenticate
+
+            # http_basic: ~
+            # http://symfony.com/doc/current/security.html#a-configuring-how-your-users-will-authenticate
+
+            # form_login: ~
+            # http://symfony.com/doc/current/cookbook/security/form_login_setup.html
+    access_control:
+        # require ROLE_ADMIN for /admin*
+        - { path: ^/enseignants, roles: ROLE_ENSEIGNANT }
+        - { path: ^/operateur, roles: ROLE_OPERATEUR }

@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+      <h1>
+  enseignants
+    </h1>
+      <table>
+          <td>
+          <th>
+              filename
+          </th>
+          <th></th>
+          </td>
+      </table>
+      {{dump(lestirages)}}
+      {% for Tirage in lestirages %}
+      
+          {{ Tirage.filename|e }}, 
+          {{ Tirage.matiere|e }},
+      {{ Tirage.formation.libelleclasse|e }}
+      
+      {% endfor %}
+
+      
+      <!--
+      <form action="" method="" >
+          <input type="file" >
+          <input type="submit" value=""
+      </form>
+    <ul>
+
+    </ul>
+      -->
+    
+   
+
+
+{% endblock %}

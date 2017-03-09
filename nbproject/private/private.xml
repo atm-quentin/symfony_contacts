@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/users/lpro/casir/vialgouq/public_html/SymfonyContacts/app/Resources/views/base.html.twig</file>
+            <file>file:/users/lpro/casir/vialgouq/public_html/SymfonyContacts/src/AppBundle/Form/demandetirageForm.php</file>
+            <file>file:/users/lpro/casir/vialgouq/public_html/SymfonyContacts/app/Resources/views/default/bonjour.html.twig</file>
+            <file>file:/users/lpro/casir/vialgouq/public_html/SymfonyContacts/src/AppBundle/Entity/Numeros.php</file>
+            <file>file:/users/lpro/casir/vialgouq/public_html/SymfonyContacts/app/config/routing.yml</file>
+            <file>file:/users/lpro/casir/vialgouq/public_html/SymfonyContacts/src/AppBundle/Controller/EnseignantsController.php</file>
+            <file>file:/users/lpro/casir/vialgouq/public_html/SymfonyContacts/app/Resources/views/operateur/index.html.twig</file>
+            <file>file:/users/lpro/casir/vialgouq/public_html/SymfonyContacts/src/AppBundle/Controller/ContactsController.php</file>
+            <file>file:/users/lpro/casir/vialgouq/public_html/SymfonyContacts/app/Resources/views/default/index.html.twig</file>
+            <file>file:/users/lpro/casir/vialgouq/public_html/SymfonyContacts/src/AppBundle/Controller/DefaultController.php</file>
+            <file>file:/users/lpro/casir/vialgouq/public_html/SymfonyContacts/src/AppBundle/Controller/OperateurController.php</file>
+            <file>file:/users/lpro/casir/vialgouq/public_html/SymfonyContacts/src/AppBundle/Repository/ContactRepository.php</file>
+            <file>file:/users/lpro/casir/vialgouq/public_html/SymfonyContacts/src/AppBundle/Entity/Formation.php</file>
+            <file>file:/users/lpro/casir/vialgouq/public_html/SymfonyContacts/app/Resources/views/operateur/login.html.twig</file>
+            <file>file:/users/lpro/casir/vialgouq/public_html/SymfonyContacts/app/config/security.yml</file>
+            <file>file:/users/lpro/casir/vialgouq/public_html/SymfonyContacts/src/AppBundle/Entity/Contact.php</file>
+        </group>
+    </open-files>
+</project-private>

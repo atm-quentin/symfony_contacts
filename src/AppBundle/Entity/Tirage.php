@@ -1,0 +1,341 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Tirage
+ *
+ * @ORM\Table(name="tirage")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\TirageRepository")
+ */
+class Tirage
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="filename", type="string", length=255)
+     */
+    private $filename;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="matiere", type="string", length=255)
+     */
+    private $matiere;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="logindemandeur", type="string", length=255)
+     */
+    private $logindemandeur;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="nbpage", type="integer")
+     */
+    private $nbpage;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="daterealisation", type="datetime")
+     */
+    private $daterealisation;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="datetirage", type="datetime")
+     */
+    private $datetirage;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="nbexemplaires", type="integer")
+     */
+    private $nbexemplaires;
+
+   /**
+     * @ORM\ManyToOne(targetEntity="Formation", inversedBy="tirages")
+     * @ORM\JoinColumn(name="formation", referencedColumnName="id")
+     */
+    private $formation;
+
+
+    /**
+     * Get id
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set filename
+     *
+     * @param string $filename
+     *
+     * @return Tirage
+     */
+    public function setFilename($filename)
+    {
+        $this->filename = $filename;
+
+        return $this;
+    }
+
+    /**
+     * Get filename
+     *
+     * @return string
+     */
+    public function getFilename()
+    {
+        return $this->filename;
+    }
+
+    /**
+     * Set matiere
+     *
+     * @param string $matiere
+     *
+     * @return Tirage
+     */
+    public function setMatiere($matiere)
+    {
+        $this->matiere = $matiere;
+
+        return $this;
+    }
+
+    /**
+     * Get matiere
+     *
+     * @return string
+     */
+    public function getMatiere()
+    {
+        return $this->matiere;
+    }
+
+    /**
+     * Set logindemandeur
+     *
+     * @param string $logindemandeur
+     *
+     * @return Tirage
+     */
+    public function setLogindemandeur($logindemandeur)
+    {
+        $this->logindemandeur = $logindemandeur;
+
+        return $this;
+    }
+
+    /**
+     * Get logindemandeur
+     *
+     * @return string
+     */
+    public function getLogindemandeur()
+    {
+        return $this->logindemandeur;
+    }
+
+    /**
+     * Set nbpage
+     *
+     * @param integer $nbpage
+     *
+     * @return Tirage
+     */
+    public function setNbpage($nbpage)
+    {
+        $this->nbpage = $nbpage;
+
+        return $this;
+    }
+
+    /**
+     * Get nbpage
+     *
+     * @return int
+     */
+    public function getNbpage()
+    {
+        return $this->nbpage;
+    }
+
+    /**
+     * Set daterealisation
+     *
+     * @param \DateTime $daterealisation
+     *
+     * @return Tirage
+     */
+    public function setDaterealisation($daterealisation)
+    {
+        $this->daterealisation = $daterealisation;
+
+        return $this;
+    }
+
+    /**
+     * Get daterealisation
+     *
+     * @return \DateTime
+     */
+    public function getDaterealisation()
+    {
+        return $this->daterealisation;
+    }
+
+    /**
+     * Set datetirage
+     *
+     * @param \DateTime $datetirage
+     *
+     * @return Tirage
+     */
+    public function setDatetirage($datetirage)
+    {
+        $this->datetirage = $datetirage;
+
+        return $this;
+    }
+
+    /**
+     * Get datetirage
+     *
+     * @return \DateTime
+     */
+    public function getDatetirage()
+    {
+        return $this->datetirage;
+    }
+
+    /**
+     * Set nbexemplaires
+     *
+     * @param integer $nbexemplaires
+     *
+     * @return Tirage
+     */
+    public function setNbexemplaires($nbexemplaires)
+    {
+        $this->nbexemplaires = $nbexemplaires;
+
+        return $this;
+    }
+
+    /**
+     * Get nbexemplaires
+     *
+     * @return int
+     */
+    public function getNbexemplaires()
+    {
+        return $this->nbexemplaires;
+    }
+
+    /**
+     * Set formation
+     *
+     * @param string $formation
+     *
+     * @return Tirage
+     */
+    public function setFormation($formation)
+    {
+        $this->formation = $formation;
+
+        return $this;
+    }
+
+    /**
+     * Get formation
+     *
+     * @return string
+     */
+    public function getFormation()
+    {
+        return $this->formation;
+    }
+    /**
+     * @var \DateTime
+     */
+    private $datedepot;
+
+
+    /**
+     * Set datedepot
+     *
+     * @param \DateTime $datedepot
+     *
+     * @return Tirage
+     */
+    public function setDatedepot($datedepot)
+    {
+        $this->datedepot = $datedepot;
+
+        return $this;
+    }
+
+    /**
+     * Get datedepot
+     *
+     * @return \DateTime
+     */
+    public function getDatedepot()
+    {
+        return $this->datedepot;
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->formation = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add formation
+     *
+     * @param \AppBundle\Entity\Formation $formation
+     *
+     * @return Tirage
+     */
+    public function addFormation(\AppBundle\Entity\Formation $formation)
+    {
+        $this->formation[] = $formation;
+
+        return $this;
+    }
+
+    /**
+     * Remove formation
+     *
+     * @param \AppBundle\Entity\Formation $formation
+     */
+    public function removeFormation(\AppBundle\Entity\Formation $formation)
+    {
+        $this->formation->removeElement($formation);
+    }
+}
